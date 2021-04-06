@@ -1,0 +1,358 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateTaxCreditNotes(
+  $input: CreateTaxCreditNotesInput!
+  $condition: ModelTaxCreditNotesConditionInput
+) {
+  createTaxCreditNotes(input: $input, condition: $condition) {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateTaxCreditNotes(
+  $input: UpdateTaxCreditNotesInput!
+  $condition: ModelTaxCreditNotesConditionInput
+) {
+  updateTaxCreditNotes(input: $input, condition: $condition) {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteTaxCreditNotes(
+  $input: DeleteTaxCreditNotesInput!
+  $condition: ModelTaxCreditNotesConditionInput
+) {
+  deleteTaxCreditNotes(input: $input, condition: $condition) {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateProjectAssetBudget(
+  $input: CreateProjectAssetBudgetInput!
+  $condition: ModelProjectAssetBudgetConditionInput
+) {
+  createProjectAssetBudget(input: $input, condition: $condition) {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateProjectAssetBudget(
+  $input: UpdateProjectAssetBudgetInput!
+  $condition: ModelProjectAssetBudgetConditionInput
+) {
+  updateProjectAssetBudget(input: $input, condition: $condition) {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteProjectAssetBudget(
+  $input: DeleteProjectAssetBudgetInput!
+  $condition: ModelProjectAssetBudgetConditionInput
+) {
+  deleteProjectAssetBudget(input: $input, condition: $condition) {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateProjectAsset(
+  $input: CreateProjectAssetInput!
+  $condition: ModelProjectAssetConditionInput
+) {
+  createProjectAsset(input: $input, condition: $condition) {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateProjectAsset(
+  $input: UpdateProjectAssetInput!
+  $condition: ModelProjectAssetConditionInput
+) {
+  updateProjectAsset(input: $input, condition: $condition) {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteProjectAsset(
+  $input: DeleteProjectAssetInput!
+  $condition: ModelProjectAssetConditionInput
+) {
+  deleteProjectAsset(input: $input, condition: $condition) {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateProject(
+  $input: CreateProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  createProject(input: $input, condition: $condition) {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateProject(
+  $input: UpdateProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  updateProject(input: $input, condition: $condition) {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteProject(
+  $input: DeleteProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  deleteProject(input: $input, condition: $condition) {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateClient(
+  $input: CreateClientInput!
+  $condition: ModelClientConditionInput
+) {
+  createClient(input: $input, condition: $condition) {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateClient(
+  $input: UpdateClientInput!
+  $condition: ModelClientConditionInput
+) {
+  updateClient(input: $input, condition: $condition) {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteClient(
+  $input: DeleteClientInput!
+  $condition: ModelClientConditionInput
+) {
+  deleteClient(input: $input, condition: $condition) {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}

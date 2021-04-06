@@ -1,0 +1,46 @@
+<h2 *ngIf="editMode">Edit client</h2>
+<h2 *ngIf="!editMode">Add a Client</h2>
+
+<form [formGroup]="form">
+    <div>
+        <mat-form-field [style.width.px]="256">
+            <mat-label><span>Name</span></mat-label>
+            <input matInput type="string" formControlName="name">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field [style.width.px]="256">
+            <mat-label><span>Street</span></mat-label>
+            <input matInput type="string" formControlName="street">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field [style.width.px]="256">
+            <mat-label><span>City</span></mat-label>
+            <textarea matInput formControlName="city"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field [style.width.px]="256">
+            <mat-label><span>Zip</span></mat-label>
+            <textarea matInput formControlName="zip"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field [style.width.px]="256">
+            <mat-label><span>Country</span></mat-label>
+            <textarea matInput formControlName="country"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="buttonbar">
+        <button *ngIf="!editMode" mat-raised-button color="primary" (click)="add()">Add</button>
+        <button *ngIf="editMode" mat-raised-button color="warn" (click)="delete()">Delete</button>
+        <button *ngIf="editMode" mat-raised-button color="primary" (click)="update()">Update</button>
+    </div>
+</form>
+

@@ -1,0 +1,313 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateTaxCreditNotes {
+  onCreateTaxCreditNotes {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateTaxCreditNotes {
+  onUpdateTaxCreditNotes {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteTaxCreditNotes {
+  onDeleteTaxCreditNotes {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateProjectAssetBudget {
+  onCreateProjectAssetBudget {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateProjectAssetBudget {
+  onUpdateProjectAssetBudget {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteProjectAssetBudget {
+  onDeleteProjectAssetBudget {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateProjectAsset {
+  onCreateProjectAsset {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateProjectAsset {
+  onUpdateProjectAsset {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteProjectAsset {
+  onDeleteProjectAsset {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateProject {
+  onCreateProject {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateProject {
+  onUpdateProject {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteProject {
+  onDeleteProject {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateClient {
+  onCreateClient {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateClient {
+  onUpdateClient {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteClient {
+  onDeleteClient {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}

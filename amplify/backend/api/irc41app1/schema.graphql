@@ -1,0 +1,48 @@
+type TaxCreditNotes @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  internalId: String
+  irc41Category: String
+  notes: String
+}
+
+type ProjectAssetBudget @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  internalId: String
+  budgetHours: Float
+  budgetAmount: Float
+  taxCreditPercent: Float
+  taxCreditHours: Float
+  taxCreditAmount: Float
+  totalTaxCredit: Float
+}
+
+type ProjectAsset @model @auth(rules: [{allow: public}]) @key(name: "byProject", fields: ["projectID"]) {
+  id: ID!
+  internalId: String
+  type: String
+  name: String
+  projectID: ID
+  ProjectAssetBudget: ProjectAssetBudget @connection
+  TaxCreditNotes: TaxCreditNotes @connection
+}
+
+type Project @model @auth(rules: [{allow: public}]) @key(name: "byClient", fields: ["clientID"]) {
+  id: ID!
+  internalId: String
+  name: String
+  contactName: String
+  clientID: ID
+  ProjectAssets: [ProjectAsset] @connection(keyName: "byProject", fields: ["id"])
+}
+
+type Client @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  internalId: String
+  name: String
+  street: String
+  city: String
+    zip: String
+  country: String
+  Projects: [Project] @connection(keyName: "byClient", fields: ["id"])
+  state: String
+}

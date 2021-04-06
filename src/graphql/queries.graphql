@@ -1,0 +1,230 @@
+# this is an auto generated file. This will be overwritten
+query GetTaxCreditNotes($id: ID!) {
+  getTaxCreditNotes(id: $id) {
+    id
+    internalId
+    irc41Category
+    notes
+    createdAt
+    updatedAt
+  }
+}
+query ListTaxCreditNotess(
+  $filter: ModelTaxCreditNotesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTaxCreditNotess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetProjectAssetBudget($id: ID!) {
+  getProjectAssetBudget(id: $id) {
+    id
+    internalId
+    budgetHours
+    budgetAmount
+    taxCreditPercent
+    taxCreditHours
+    taxCreditAmount
+    totalTaxCredit
+    createdAt
+    updatedAt
+  }
+}
+query ListProjectAssetBudgets(
+  $filter: ModelProjectAssetBudgetFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listProjectAssetBudgets(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetProjectAsset($id: ID!) {
+  getProjectAsset(id: $id) {
+    id
+    internalId
+    type
+    name
+    projectID
+    ProjectAssetBudget {
+      id
+      internalId
+      budgetHours
+      budgetAmount
+      taxCreditPercent
+      taxCreditHours
+      taxCreditAmount
+      totalTaxCredit
+      createdAt
+      updatedAt
+    }
+    TaxCreditNotes {
+      id
+      internalId
+      irc41Category
+      notes
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListProjectAssets(
+  $filter: ModelProjectAssetFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listProjectAssets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      internalId
+      type
+      name
+      projectID
+      ProjectAssetBudget {
+        id
+        internalId
+        budgetHours
+        budgetAmount
+        taxCreditPercent
+        taxCreditHours
+        taxCreditAmount
+        totalTaxCredit
+        createdAt
+        updatedAt
+      }
+      TaxCreditNotes {
+        id
+        internalId
+        irc41Category
+        notes
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetProject($id: ID!) {
+  getProject(id: $id) {
+    id
+    internalId
+    name
+    contactName
+    clientID
+    ProjectAssets {
+      items {
+        id
+        internalId
+        type
+        name
+        projectID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListProjects(
+  $filter: ModelProjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      internalId
+      name
+      contactName
+      clientID
+      ProjectAssets {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetClient($id: ID!) {
+  getClient(id: $id) {
+    id
+    internalId
+    name
+    street
+    city
+    zip
+    country
+    Projects {
+      items {
+        id
+        internalId
+        name
+        contactName
+        clientID
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    state
+    createdAt
+    updatedAt
+  }
+}
+query ListClients(
+  $filter: ModelClientFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listClients(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      internalId
+      name
+      street
+      city
+      zip
+      country
+      Projects {
+        nextToken
+      }
+      state
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
