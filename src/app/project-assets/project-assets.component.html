@@ -1,0 +1,10 @@
+<mat-nav-list>
+    <a *ngFor="let projectAsset of projectAssets" mat-list-item [routerLink]="['/projectAsset-lines', projectAsset.id]">
+        <h3 matLine><span *ngIf="projectAsset.serialnum">{{projectAsset.serialnum}} - </span>{{projectAsset.createdAt | date:'shortDate'}} - {{projectAsset.title}}</h3>
+        <p matLine>{{projectAsset.project?.name}}</p>
+    </a>
+</mat-nav-list>
+
+<button mat-fab class="mat-fab-bottom-right" color="accent" [routerLink]="['/newprojectAsset']">
+    <mat-icon>add</mat-icon>
+</button>

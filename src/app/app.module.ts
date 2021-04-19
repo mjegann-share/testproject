@@ -19,12 +19,30 @@ import { MatListModule} from '@angular/material/list';
 import { MatIconModule} from '@angular/material/icon';
 import { MatInputModule} from '@angular/material/input';
 import { MatSelectModule} from '@angular/material/select';
+import { ProjectComponent } from './project/project.component';
+import { ClientSelectComponent } from './client-select/client-select.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { NoteComponent } from './note/note.component';
+import { ModuleComponent } from './module/module.component';
+import { ProjectAssetComponent } from './project-asset/project-asset.component';
+import { ProjectAssetsComponent } from './project-assets/project-assets.component';
+import { TaxCreditNoteComponent } from './tax-credit-note/tax-credit-note.component';
+import { TaxCreditNotesComponent } from './tax-credit-notes/tax-credit-notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
-    ClientsComponent
+    ClientsComponent,
+    ProjectComponent,
+    ClientSelectComponent,
+    ProjectsComponent,
+    NoteComponent,
+    ModuleComponent,
+    ProjectAssetComponent,
+    ProjectAssetsComponent,
+    TaxCreditNoteComponent,
+    TaxCreditNotesComponent
   ],
   imports: [
     BrowserModule,

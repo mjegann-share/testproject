@@ -1,10 +1,12 @@
 <!-- amplify-authenticator -->
   <main>
-    <mat-toolbar color="primary"><span>Billing Application</span>
+    <mat-toolbar color="primary"><span>Projects Application</span>
       <span class="fill-remaining-space"></span>
       <a mat-button [routerLink]="['/me']">Me</a>
       <a mat-button [routerLink]="['/clients']">My Clients</a>
-      <a mat-button [routerLink]="['/bills']">My bills</a>
+      <a mat-button [routerLink]="['/projects']">My Projects</a>
+      <a mat-button [routerLink]="['/project-assets']">My Modules</a>
+      <a mat-button [routerLink]="['/tax-credit-notes']">My Notes</a>
       <amplify-sign-out></amplify-sign-out>
     </mat-toolbar>
     <div class="content">

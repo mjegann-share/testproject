@@ -1,0 +1,11 @@
+<p>projects works!</p>
+<mat-nav-list>
+    <a *ngFor="let project of projects" mat-list-item [routerLink]="['/project', project.id]">
+        <h3 matLine><span *ngIf="project.internalId">{{project.internalId}} - </span>{{project.createdAt | date:'shortDate'}} - {{project.name}}</h3>
+        <p matLine>{{project.client?.name}}</p>
+    </a>
+</mat-nav-list>
+
+<button mat-fab class="mat-fab-bottom-right" color="accent" [routerLink]="['/newproject']">
+    <mat-icon>add</mat-icon>
+</button>
